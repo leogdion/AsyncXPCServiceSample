@@ -1,0 +1,739 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B3FFE2B22D64C99A00CC8B28 /* XPCService.xpc in Embed XPC Services */ = {isa = PBXBuildFile; fileRef = B3FFE2A62D64C99A00CC8B28 /* XPCService.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B3FFE2CC2D64CEA300CC8B28 /* AsyncXPCConnection in Frameworks */ = {isa = PBXBuildFile; productRef = B3FFE2CB2D64CEA300CC8B28 /* AsyncXPCConnection */; };
+		B3FFE2CF2D64CEBA00CC8B28 /* AsyncXPCConnection in Frameworks */ = {isa = PBXBuildFile; productRef = B3FFE2CE2D64CEBA00CC8B28 /* AsyncXPCConnection */; };
+		B3FFE2DB2D6519BB00CC8B28 /* Service.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3FFE2D52D6519BB00CC8B28 /* Service.framework */; };
+		B3FFE2DC2D6519BB00CC8B28 /* Service.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B3FFE2D52D6519BB00CC8B28 /* Service.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B3FFE2E22D6519C100CC8B28 /* Service.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3FFE2D52D6519BB00CC8B28 /* Service.framework */; };
+		B3FFE2E32D6519C100CC8B28 /* Service.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B3FFE2D52D6519BB00CC8B28 /* Service.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B3FFE2B02D64C99A00CC8B28 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B3FFE2742D64C96600CC8B28 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B3FFE2A52D64C99A00CC8B28;
+			remoteInfo = XPCService;
+		};
+		B3FFE2D92D6519BB00CC8B28 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B3FFE2742D64C96600CC8B28 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B3FFE2D42D6519BB00CC8B28;
+			remoteInfo = Service;
+		};
+		B3FFE2E42D6519C100CC8B28 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B3FFE2742D64C96600CC8B28 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B3FFE2D42D6519BB00CC8B28;
+			remoteInfo = Service;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B3FFE2A12D64C97900CC8B28 /* Embed XPC Services */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/XPCServices";
+			dstSubfolderSpec = 16;
+			files = (
+				B3FFE2B22D64C99A00CC8B28 /* XPCService.xpc in Embed XPC Services */,
+			);
+			name = "Embed XPC Services";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3FFE2E12D6519BB00CC8B28 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B3FFE2DC2D6519BB00CC8B28 /* Service.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3FFE2E62D6519C100CC8B28 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B3FFE2E32D6519C100CC8B28 /* Service.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		B3FFE27C2D64C96600CC8B28 /* XPCApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XPCApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3FFE2A62D64C99A00CC8B28 /* XPCService.xpc */ = {isa = PBXFileReference; explicitFileType = "wrapper.xpc-service"; includeInIndex = 0; path = XPCService.xpc; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3FFE2D52D6519BB00CC8B28 /* Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Service.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		B3FFE2B32D64C99A00CC8B28 /* Exceptions for "XPCService" folder in "XPCService" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = B3FFE2A52D64C99A00CC8B28 /* XPCService */;
+		};
+		B3FFE2DD2D6519BB00CC8B28 /* Exceptions for "Service" folder in "Service" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			publicHeaders = (
+				Service.h,
+			);
+			target = B3FFE2D42D6519BB00CC8B28 /* Service */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		B3FFE27E2D64C96600CC8B28 /* XPCApp */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = XPCApp;
+			sourceTree = "<group>";
+		};
+		B3FFE2A72D64C99A00CC8B28 /* XPCService */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				B3FFE2B32D64C99A00CC8B28 /* Exceptions for "XPCService" folder in "XPCService" target */,
+			);
+			path = XPCService;
+			sourceTree = "<group>";
+		};
+		B3FFE2D62D6519BB00CC8B28 /* Service */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				B3FFE2DD2D6519BB00CC8B28 /* Exceptions for "Service" folder in "Service" target */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B3FFE2792D64C96600CC8B28 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3FFE2DB2D6519BB00CC8B28 /* Service.framework in Frameworks */,
+				B3FFE2CF2D64CEBA00CC8B28 /* AsyncXPCConnection in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3FFE2A32D64C99A00CC8B28 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3FFE2E22D6519C100CC8B28 /* Service.framework in Frameworks */,
+				B3FFE2CC2D64CEA300CC8B28 /* AsyncXPCConnection in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3FFE2D22D6519BB00CC8B28 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B3FFE2732D64C96600CC8B28 = {
+			isa = PBXGroup;
+			children = (
+				B3FFE27E2D64C96600CC8B28 /* XPCApp */,
+				B3FFE2A72D64C99A00CC8B28 /* XPCService */,
+				B3FFE2D62D6519BB00CC8B28 /* Service */,
+				B3FFE2CD2D64CEBA00CC8B28 /* Frameworks */,
+				B3FFE27D2D64C96600CC8B28 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B3FFE27D2D64C96600CC8B28 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B3FFE27C2D64C96600CC8B28 /* XPCApp.app */,
+				B3FFE2A62D64C99A00CC8B28 /* XPCService.xpc */,
+				B3FFE2D52D6519BB00CC8B28 /* Service.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B3FFE2CD2D64CEBA00CC8B28 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B3FFE2D02D6519BB00CC8B28 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		B3FFE27B2D64C96600CC8B28 /* XPCApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3FFE28B2D64C96700CC8B28 /* Build configuration list for PBXNativeTarget "XPCApp" */;
+			buildPhases = (
+				B3FFE2782D64C96600CC8B28 /* Sources */,
+				B3FFE2792D64C96600CC8B28 /* Frameworks */,
+				B3FFE27A2D64C96600CC8B28 /* Resources */,
+				B3FFE2A12D64C97900CC8B28 /* Embed XPC Services */,
+				B3FFE2E12D6519BB00CC8B28 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B3FFE2B12D64C99A00CC8B28 /* PBXTargetDependency */,
+				B3FFE2DA2D6519BB00CC8B28 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				B3FFE27E2D64C96600CC8B28 /* XPCApp */,
+			);
+			name = XPCApp;
+			packageProductDependencies = (
+				B3FFE2CE2D64CEBA00CC8B28 /* AsyncXPCConnection */,
+			);
+			productName = XPCApp;
+			productReference = B3FFE27C2D64C96600CC8B28 /* XPCApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B3FFE2A52D64C99A00CC8B28 /* XPCService */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3FFE2B42D64C99A00CC8B28 /* Build configuration list for PBXNativeTarget "XPCService" */;
+			buildPhases = (
+				B3FFE2A22D64C99A00CC8B28 /* Sources */,
+				B3FFE2A32D64C99A00CC8B28 /* Frameworks */,
+				B3FFE2A42D64C99A00CC8B28 /* Resources */,
+				B3FFE2E62D6519C100CC8B28 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B3FFE2E52D6519C100CC8B28 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				B3FFE2A72D64C99A00CC8B28 /* XPCService */,
+			);
+			name = XPCService;
+			packageProductDependencies = (
+				B3FFE2CB2D64CEA300CC8B28 /* AsyncXPCConnection */,
+			);
+			productName = XPCService;
+			productReference = B3FFE2A62D64C99A00CC8B28 /* XPCService.xpc */;
+			productType = "com.apple.product-type.xpc-service";
+		};
+		B3FFE2D42D6519BB00CC8B28 /* Service */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3FFE2DE2D6519BB00CC8B28 /* Build configuration list for PBXNativeTarget "Service" */;
+			buildPhases = (
+				B3FFE2D02D6519BB00CC8B28 /* Headers */,
+				B3FFE2D12D6519BB00CC8B28 /* Sources */,
+				B3FFE2D22D6519BB00CC8B28 /* Frameworks */,
+				B3FFE2D32D6519BB00CC8B28 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				B3FFE2D62D6519BB00CC8B28 /* Service */,
+			);
+			name = Service;
+			packageProductDependencies = (
+			);
+			productName = Service;
+			productReference = B3FFE2D52D6519BB00CC8B28 /* Service.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B3FFE2742D64C96600CC8B28 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					B3FFE27B2D64C96600CC8B28 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					B3FFE2A52D64C99A00CC8B28 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					B3FFE2D42D6519BB00CC8B28 = {
+						CreatedOnToolsVersion = 16.2;
+						LastSwiftMigration = 1620;
+					};
+				};
+			};
+			buildConfigurationList = B3FFE2772D64C96600CC8B28 /* Build configuration list for PBXProject "XPCApp" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B3FFE2732D64C96600CC8B28;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				B3FFE2CA2D64CEA300CC8B28 /* XCRemoteSwiftPackageReference "AsyncXPCConnection" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = B3FFE27D2D64C96600CC8B28 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B3FFE27B2D64C96600CC8B28 /* XPCApp */,
+				B3FFE2A52D64C99A00CC8B28 /* XPCService */,
+				B3FFE2D42D6519BB00CC8B28 /* Service */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B3FFE27A2D64C96600CC8B28 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3FFE2A42D64C99A00CC8B28 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3FFE2D32D6519BB00CC8B28 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B3FFE2782D64C96600CC8B28 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3FFE2A22D64C99A00CC8B28 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3FFE2D12D6519BB00CC8B28 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B3FFE2B12D64C99A00CC8B28 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B3FFE2A52D64C99A00CC8B28 /* XPCService */;
+			targetProxy = B3FFE2B02D64C99A00CC8B28 /* PBXContainerItemProxy */;
+		};
+		B3FFE2DA2D6519BB00CC8B28 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B3FFE2D42D6519BB00CC8B28 /* Service */;
+			targetProxy = B3FFE2D92D6519BB00CC8B28 /* PBXContainerItemProxy */;
+		};
+		B3FFE2E52D6519C100CC8B28 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B3FFE2D42D6519BB00CC8B28 /* Service */;
+			targetProxy = B3FFE2E42D6519C100CC8B28 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		B3FFE2892D64C96700CC8B28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B3FFE28A2D64C96700CC8B28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		B3FFE28C2D64C96700CC8B28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = XPCApp/XPCApp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"XPCApp/Preview Content\"";
+				DEVELOPMENT_TEAM = MLT7M394S7;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brightdigit.XPCApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		B3FFE28D2D64C96700CC8B28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = XPCApp/XPCApp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"XPCApp/Preview Content\"";
+				DEVELOPMENT_TEAM = MLT7M394S7;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brightdigit.XPCApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		B3FFE2B52D64C99A00CC8B28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = XPCService/XPCService.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MLT7M394S7;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = XPCService/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = XPCService;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brightdigit.XPCService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		B3FFE2B62D64C99A00CC8B28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = XPCService/XPCService.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MLT7M394S7;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = XPCService/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = XPCService;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brightdigit.XPCService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		B3FFE2DF2D6519BB00CC8B28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = MLT7M394S7;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.brightdigit.Service;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B3FFE2E02D6519BB00CC8B28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = MLT7M394S7;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.brightdigit.Service;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B3FFE2772D64C96600CC8B28 /* Build configuration list for PBXProject "XPCApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3FFE2892D64C96700CC8B28 /* Debug */,
+				B3FFE28A2D64C96700CC8B28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B3FFE28B2D64C96700CC8B28 /* Build configuration list for PBXNativeTarget "XPCApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3FFE28C2D64C96700CC8B28 /* Debug */,
+				B3FFE28D2D64C96700CC8B28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B3FFE2B42D64C99A00CC8B28 /* Build configuration list for PBXNativeTarget "XPCService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3FFE2B52D64C99A00CC8B28 /* Debug */,
+				B3FFE2B62D64C99A00CC8B28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B3FFE2DE2D6519BB00CC8B28 /* Build configuration list for PBXNativeTarget "Service" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3FFE2DF2D6519BB00CC8B28 /* Debug */,
+				B3FFE2E02D6519BB00CC8B28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B3FFE2CA2D64CEA300CC8B28 /* XCRemoteSwiftPackageReference "AsyncXPCConnection" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ChimeHQ/AsyncXPCConnection.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B3FFE2CB2D64CEA300CC8B28 /* AsyncXPCConnection */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B3FFE2CA2D64CEA300CC8B28 /* XCRemoteSwiftPackageReference "AsyncXPCConnection" */;
+			productName = AsyncXPCConnection;
+		};
+		B3FFE2CE2D64CEBA00CC8B28 /* AsyncXPCConnection */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B3FFE2CA2D64CEA300CC8B28 /* XCRemoteSwiftPackageReference "AsyncXPCConnection" */;
+			productName = AsyncXPCConnection;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = B3FFE2742D64C96600CC8B28 /* Project object */;
+}
