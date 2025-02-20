@@ -8,10 +8,9 @@
 import AsyncXPCConnection
 import AsyncServiceXPC
 import Foundation
+@_exported import AsyncService
 
-
-extension RemoteXPCService : AsyncService where Service : AsyncXPCServiceSampleXPCProtocol  {
-  
+extension RemoteXPCService : AsyncService where Service : AsyncServiceXPCProtocol  {  
   public func performCalculation(firstNumber: Int, secondNumber: Int) async -> Int {
     try! await self.withContinuation { service, continuation in
       service.performCalculation(firstNumber: firstNumber, secondNumber: secondNumber) { value in
@@ -24,9 +23,9 @@ extension RemoteXPCService : AsyncService where Service : AsyncXPCServiceSampleX
 public enum ServiceFactory {
   public static func service () -> AsyncService {
     let connection = NSXPCConnection(serviceName: "com.brightdigit.AsyncXPCServiceSampleXPC")
-    connection.remoteObjectInterface = NSXPCInterface(with: AsyncXPCServiceSampleXPCProtocol.self)
+    connection.remoteObjectInterface = NSXPCInterface(with: AsyncServiceXPCProtocol.self)
     connection.resume()
     
-    return RemoteXPCService<AsyncXPCServiceSampleXPCProtocol>(connection: connection)
+    return RemoteXPCService<AsyncServiceXPCProtocol>(connection: connection)
   }
 }

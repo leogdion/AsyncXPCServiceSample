@@ -12,12 +12,9 @@ let package = Package(
             name: "AsyncXPC",
             targets: ["AsyncXPC"]
         ),
+
         .library(
-          name: "AsyncServiceXPC",
-          targets: ["AsyncServiceXPC"]
-        ),
-        .library(
-          name: "AsyncService", targets: ["AsyncService"]
+          name: "AsyncClient", targets: ["AsyncClient"]
         )
     ],
     dependencies:  [
@@ -30,8 +27,11 @@ let package = Package(
           name: "AsyncXPC", dependencies: ["AsyncServiceXPC", "AsyncService"]
         ),
         .target(
-          name: "AsyncService",
-          dependencies: ["AsyncXPCConnection", "AsyncServiceXPC"]
+          name: "AsyncService"
+        ),
+        .target(
+          name: "AsyncClient",
+          dependencies: ["AsyncXPCConnection", "AsyncServiceXPC", "AsyncService"]
         ),
         .target(
           name: "AsyncServiceXPC"
