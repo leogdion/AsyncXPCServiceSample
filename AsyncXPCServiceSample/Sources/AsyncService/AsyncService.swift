@@ -9,23 +9,9 @@ import AsyncXPCConnection
 import Foundation
 import AsyncServiceXPC
 
-@available(macOS 13.0, *)
-public struct AsyncServiceImpl : AsyncService, Sendable {
-  public init () {
-    
-  }
-  public func performCalculation(firstNumber: Int, secondNumber: Int) async -> Int {
-    try? await Task.sleep(for: .seconds(.random(in: 0...5)))
-    return firstNumber + secondNumber
-  }
-  
-  
-}
 
 
-public protocol AsyncServiceContainer {
-  var asyncService: AsyncService { get }
-}
+
 
 
 
@@ -33,21 +19,7 @@ public protocol AsyncService {
   func performCalculation(firstNumber: Int, secondNumber: Int) async -> Int
 }
 
-extension RemoteXPCService : AsyncService where Service : AsyncXPCServiceSampleXPCProtocol  {
-  
-  public func performCalculation(firstNumber: Int, secondNumber: Int) async -> Int {
-    try! await self.withContinuation { service, continuation in
-      service.performCalculation(firstNumber: firstNumber, secondNumber: secondNumber) { value in
-        continuation.resume(returning: value)
-      }
-    }
-//    try! await self.withValueErrorCompletion { service, completion in
-//      service.performCalculation(firstNumber: firstNumber, secondNumber: secondNumber) { value in
-//        
-//      }
-//    }
-  }
-}
+
 
 
 /*
