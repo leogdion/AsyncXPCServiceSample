@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		B36EBC5F2D677151006CB52E /* AsyncXPCServiceSampleXPC.xpc in Embed XPC Services */ = {isa = PBXBuildFile; fileRef = B36EBC532D677151006CB52E /* AsyncXPCServiceSampleXPC.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B36EBC862D6772D7006CB52E /* AsyncXPC in Frameworks */ = {isa = PBXBuildFile; productRef = B36EBC852D6772D7006CB52E /* AsyncXPC */; };
-		B36EBC992D6777E4006CB52E /* AsyncService in Frameworks */ = {isa = PBXBuildFile; productRef = B36EBC982D6777E4006CB52E /* AsyncService */; };
+		B36EBCAA2D677BC7006CB52E /* AsyncServiceXPC in Frameworks */ = {isa = PBXBuildFile; productRef = B36EBCA92D677BC7006CB52E /* AsyncServiceXPC */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B36EBC992D6777E4006CB52E /* AsyncService in Frameworks */,
+				B36EBCAA2D677BC7006CB52E /* AsyncServiceXPC in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +135,7 @@
 			);
 			name = AsyncXPCServiceSampleApp;
 			packageProductDependencies = (
-				B36EBC982D6777E4006CB52E /* AsyncService */,
+				B36EBCA92D677BC7006CB52E /* AsyncServiceXPC */,
 			);
 			productName = AsyncXPCServiceSampleApp;
 			productReference = B36EBC332D6770FE006CB52E /* AsyncXPCServiceSampleApp.app */;
@@ -509,10 +509,10 @@
 			package = B36EBC652D67721E006CB52E /* XCLocalSwiftPackageReference "AsyncXPCServiceSample" */;
 			productName = AsyncXPC;
 		};
-		B36EBC982D6777E4006CB52E /* AsyncService */ = {
+		B36EBCA92D677BC7006CB52E /* AsyncServiceXPC */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B36EBC652D67721E006CB52E /* XCLocalSwiftPackageReference "AsyncXPCServiceSample" */;
-			productName = AsyncService;
+			productName = AsyncServiceXPC;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

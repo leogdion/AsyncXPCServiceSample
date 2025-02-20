@@ -7,27 +7,15 @@
 
 import Foundation
 
-
-@available(macOS 13.0, *)
-public struct AsyncServiceImpl : AsyncService {
-  public func performCalculation(firstNumber: Int, secondNumber: Int) async -> Int {
-    try? await Task.sleep(for: .seconds(.random(in: 0...5)))
-    return firstNumber + secondNumber
-  }
+/// The protocol that this service will vend as its API. This protocol will also need to be visible to the process hosting the service.
+@objc public protocol AsyncXPCServiceSampleXPCProtocol {
+    
+    /// Replace the API of this protocol with an API appropriate to the service you are vending.
+    func performCalculation(firstNumber: Int, secondNumber: Int, with reply: @escaping (Int) -> Void)
   
-  
+    
 }
 
-
-public protocol AsyncServiceContainer {
-  var asyncService: AsyncService { get }
-}
-
-
-
-public protocol AsyncService {
-  func performCalculation(firstNumber: Int, secondNumber: Int) async -> Int
-}
 /*
  To use the service from an application or other process, use NSXPCConnection to establish a connection to the service by doing something like this:
 

@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import AsyncService
+import AsyncServiceXPC
 
 final public class ServiceDelegate: NSObject, NSXPCListenerDelegate {
     
