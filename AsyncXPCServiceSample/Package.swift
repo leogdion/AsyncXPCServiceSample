@@ -5,6 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "AsyncXPCServiceSample",
+    platforms: [.macOS(.v14)],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
@@ -26,7 +27,8 @@ let package = Package(
           name: "AsyncXPC", dependencies: ["AsyncServiceXPC", "AsyncService"]
         ),
         .target(
-          name: "AsyncService"
+          name: "AsyncService",
+          dependencies: ["AsyncXPCConnection", "AsyncServiceXPC"]
         ),
         .target(
           name: "AsyncServiceXPC"

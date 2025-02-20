@@ -11,7 +11,7 @@ import Foundation
 @objc public protocol AsyncXPCServiceSampleXPCProtocol {
     
     /// Replace the API of this protocol with an API appropriate to the service you are vending.
-    func performCalculation(firstNumber: Int, secondNumber: Int, with reply: @escaping (Int) -> Void)
+  func performCalculation(firstNumber: Int, secondNumber: Int, with reply: @Sendable @escaping (Int) -> Void)
   
     
 }
