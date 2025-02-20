@@ -7,6 +7,6 @@
 
 
 
-public protocol SwiftProtocol {
+public protocol AsyncService {
   func performCalculation(firstNumber: Int, secondNumber: Int) async throws -> Int
 }
