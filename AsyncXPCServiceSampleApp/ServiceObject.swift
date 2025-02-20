@@ -8,6 +8,7 @@
 import AsyncClient
 import Observation
 
+@MainActor
 @Observable
 class ServiceObject {
   let service : any AsyncService = ServiceFactory.service()
@@ -31,9 +32,12 @@ class ServiceObject {
     self.secondNumber = .random(in: 0..<1000)
   }
   
-  func performCalculation () async {
-    Task {
-      self.sum = await service.performCalculation(firstNumber: firstNumber, secondNumber: secondNumber)
-    }
+   func performCalculation () async {
+     let sum = await Task { [service] in
+      return await service.performCalculation(firstNumber: firstNumber, secondNumber: secondNumber)
+     }.value
+     await MainActor.run {
+       self.sum = sum
+     }
   }
 }
