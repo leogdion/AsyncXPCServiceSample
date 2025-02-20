@@ -6,10 +6,11 @@
 //
 
 import SwiftUI
-import AsyncServiceXPC
+import AsyncService
 
 @Observable
 class ServiceObject {
+  let service : any AsyncService = ServiceFactory.service()
   var firstNumber : Int = .random(in: 0..<1000) {
     willSet {
       self.sum = nil
@@ -21,13 +22,13 @@ class ServiceObject {
     }
   }
   var sum: Int? = nil
-  let connection : NSXPCConnection
+ // let connection : NSXPCConnection
   
   init() {
-    let connection = NSXPCConnection(serviceName: "com.brightdigit.AsyncXPCServiceSampleXPC")
-    connection.remoteObjectInterface = NSXPCInterface(with: AsyncXPCServiceSampleXPCProtocol.self)
-    connection.resume()
-    self.connection = connection
+//    let connection = NSXPCConnection(serviceName: "com.brightdigit.AsyncXPCServiceSampleXPC")
+//    connection.remoteObjectInterface = NSXPCInterface(with: AsyncXPCServiceSampleXPCProtocol.self)
+//    connection.resume()
+//    self.connection = connection
   }
   
   func randomize () {
@@ -36,12 +37,14 @@ class ServiceObject {
   }
   
   func performCalculation () async {
-    
-    if let proxy = connection.remoteObjectProxy as? AsyncXPCServiceSampleXPCProtocol {
-      proxy.performCalculation(firstNumber: firstNumber, secondNumber: secondNumber) { result in
-        self.sum = result
-        }
+    Task {
+      self.sum =    await service.performCalculation(firstNumber: firstNumber, secondNumber: secondNumber)
     }
+//    if let proxy = connection.remoteObjectProxy as? AsyncXPCServiceSampleXPCProtocol {
+//      proxy.performCalculation(firstNumber: firstNumber, secondNumber: secondNumber) { result in
+//        self.sum = result
+//        }
+//    }
   }
 }
 

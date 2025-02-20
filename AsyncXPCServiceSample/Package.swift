@@ -15,6 +15,9 @@ let package = Package(
         .library(
           name: "AsyncServiceXPC",
           targets: ["AsyncServiceXPC"]
+        ),
+        .library(
+          name: "AsyncService", targets: ["AsyncService"]
         )
     ],
     dependencies:  [
