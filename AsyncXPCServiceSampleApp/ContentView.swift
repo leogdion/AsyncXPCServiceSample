@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import AsyncService
+import AsyncServiceXPC
 
 @Observable
 class ServiceObject {
@@ -35,7 +35,7 @@ class ServiceObject {
     self.secondNumber = .random(in: 0..<1000)
   }
   
-  func performCalculation () {
+  func performCalculation () async {
     
     if let proxy = connection.remoteObjectProxy as? AsyncXPCServiceSampleXPCProtocol {
       proxy.performCalculation(firstNumber: firstNumber, secondNumber: secondNumber) { result in
@@ -64,7 +64,9 @@ struct ContentView: View {
           format: .number
         )
         Button("=") {
-          object.performCalculation()
+          Task {
+            await object.performCalculation()
+          }
         }
         TextField("sum", text: .constant( self.object.sum.map(\.description) ?? ""), prompt: Text("")).disabled(true)
       }
