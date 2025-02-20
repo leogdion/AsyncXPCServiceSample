@@ -20,12 +20,3 @@ extension RemoteXPCService : AsyncService where Service : AsyncServiceXPCProtoco
   }
 }
 
-public enum ServiceFactory {
-  public static func service () -> AsyncService {
-    let connection = NSXPCConnection(serviceName: "com.brightdigit.AsyncXPCServiceSampleXPC")
-    connection.remoteObjectInterface = NSXPCInterface(with: AsyncServiceXPCProtocol.self)
-    connection.resume()
-    
-    return RemoteXPCService<AsyncServiceXPCProtocol>(connection: connection)
-  }
-}
